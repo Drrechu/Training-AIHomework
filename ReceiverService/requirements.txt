@@ -1,0 +1,7 @@
+# Please keep alphabetical order
+flasgger==0.9.5
+flask==1.1.2
+Flask-RESTful==0.3.8
+flask-restplus==0.13.0
+requests==2.25.1
+Werkzeug==0.16.1

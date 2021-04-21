@@ -1,0 +1,37 @@
+---
+swagger: "2.0"
+info:
+  title: FlaskService1
+  description: Simple Flask service
+  version: "1"
+
+paths:
+  /api/v1/ping:
+    post:
+      summary: "Make get request to given url"
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: url_to_get
+          schema:
+            type: object
+            required:
+              - url
+            properties:
+              url:
+                type: string
+                example: 'https://www.foobar.com'
+      responses:
+        200:
+          description: Succes
+
+  /health:
+    get:
+      summary: "Check health"
+      responses:
+        200:
+          description: Succes
+        500:
+          description: Some things got tough
+

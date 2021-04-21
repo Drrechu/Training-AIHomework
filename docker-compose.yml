@@ -1,0 +1,23 @@
+services:
+  service1:
+    build: Service1
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    networks:
+      - test
+
+  receiverservice:
+    build: ReceiverService
+    ports:
+      - "8008:8080"
+    networks:
+      - test
+
+networks:
+  test:
+    driver: bridge

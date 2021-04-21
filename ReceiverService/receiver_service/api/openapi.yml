@@ -1,0 +1,16 @@
+---
+swagger: "2.0"
+info:
+  title: ReceiverService
+  description: Simple Flask service
+  version: "1"
+
+paths:
+  /api/v1/info:
+    get:
+      summary: "Get info"
+      consumes:
+        - application/json
+      responses:
+        200:
+          description: Succes
